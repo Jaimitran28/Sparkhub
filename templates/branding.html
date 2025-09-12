@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SparkHub - Ignite Ideas</title>
+  <link rel="icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/branding.css') }}">
+</head>
+
+<body>
+  <div class="bg-aurora"></div>
+  <!-- Startup Animation Overlay -->
+  <div id="loader">
+    <!-- Bulb SVG -->
+    <svg id="bulb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="gray">
+      <path d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5"/>
+    </svg>
+
+    <!-- Fireflies -->
+    <div class="fireflies"></div>
+
+    <!-- Bulb Glow -->
+    <div id="bulb-glow"></div>
+
+    <!-- App Name -->
+    <h1 id="app-name">SparkHub</h1>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar" aria-label="Main Navigation">
+    <div class="container nav-container">
+      <img src="static/img/logo.png" alt="SparkHub Logo" class="logo-img">
+      <div class="logo">SparkHub</div>
+
+
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#timeline">Features</a></li>
+        <li><a href="#offer">What We Offer</a></li>
+        <li><a href="#why-choose-us">Why Choose Us</a></li>
+        <li><a href="#stack">Tech Stack</a></li>
+      </ul>
+      <div class="nav-auth">
+        <a class="cta small" href="{{ url_for('login') }}">Login</a>
+        <a class="cta small alt" href="{{ url_for('signup') }}">Sign Up</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <header id="hero" class="hero container">
+    <div class="hero-inner">
+      <h1><span class="gradient-text">SparkHub</span></h1><h2>Ignite Ideas. Shape Tomorrow.</h2>
+      <p class="tagline">The ultimate startup ecosystem — where ideas meet innovation, mentorship, and opportunity.</p>
+      <div class="hero-cta">
+        <a class="cta" href="{{ url_for('signup') }}">Get Started</a>
+        <a class="cta alt" href="#timeline">Explore More</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- About -->
+  <section id="about" class="section about container">
+    <h2>About SparkHub</h2>
+    <div class="about-content" style="display: flex; align-items: center; gap: 3rem; flex-wrap: wrap;">
+      
+      <!-- Text Content -->
+      <div class="about-text" style="flex: 1; min-width: 280px;">
+        <p>
+          SparkHub is a next-gen platform designed for dreamers, innovators, and entrepreneurs.
+          From idea validation to scaling globally, our platform equips startups with mentorship,
+          funding connections, and collaborative tools.
+        </p>
+      </div>
+
+      <!-- App Screenshot -->
+      <div style="flex:1; display:flex; justify-content:center; margin:2rem;">
+        <div style="
+          background: rgba(255, 255, 255, 0.05);
+          border-radius: 20px;
+          padding: 1rem;
+          box-shadow: 0 15px 40px rgba(0,0,0,0.6), 0 0 20px rgba(106,92,255,0.5);
+          max-width: 600px;
+          width: 100%;
+          backdrop-filter: blur(12px);
+          transition: transform 0.5s ease;
+        ">
+          <img src="static/img/ss.png" alt="App Screenshot" style="
+            width: 100%;
+            max-width: 550px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+            transition: transform 0.5s ease, box-shadow 0.5s ease;
+          ">
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- Features / Timeline -->
+  <section id="timeline" class="section timeline container">
+    <h2> Our Features</h2>
+    <div class="timeline-wrapper">
+
+      <!-- Accounts & Authentication -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">🔑</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">Accounts & Authentication</div>
+              <div class="card-back">
+                Multi-account system.<br>
+                Each account’s data is stored in a separate JSON file.<br>
+                Users must sign up / log in before using interactive features.<br>
+                Roles: User & Admin.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Idea Management -->
+      <div class="timeline-item">
+        <div class="timeline-icon">💡</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">Idea Management</div>
+              <div class="card-back">
+                Post new ideas, edit your own projects, bring down ideas voluntarily (user) or by admin with mandatory reason.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Idea Display -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">📊</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">Idea Display</div>
+              <div class="card-back">
+                Browse all ideas in a responsive grid.<br>
+                Search and filter by keywords or category.<br>
+                Optional sorting by latest, most upvoted, or most reported.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Voting System -->
+      <div class="timeline-item">
+        <div class="timeline-icon">👍👎</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">Voting System</div>
+              <div class="card-back">
+                Upvotes & Downvotes available only for logged-in users.<br>
+                Each user can vote only once per project (toggle allowed).
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Reporting System -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">🚩</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">Reporting System</div>
+              <div class="card-back">
+                Logged-in users can report projects.<br>
+                Admin can review reports and bring down projects with reason.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- User Dashboard -->
+      <div class="timeline-item">
+        <div class="timeline-icon">👤</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">User Dashboard</div>
+              <div class="card-back">
+                My Projects: Edit, delete, or bring down your own projects.<br>
+                Blocked Projects tab: Shows projects taken down by admin with reason.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Admin Dashboard -->
+      <div class="timeline-item left">
+        <div class="timeline-icon">🛡️</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">Admin Dashboard</div>
+              <div class="card-back">
+                View all ideas, including reported ones.<br>
+                Take down projects with mandatory reason; action logged for uploader.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- UI & UX -->
+      <div class="timeline-item">
+        <div class="timeline-icon">🎨</div>
+        <div class="timeline-content glass">
+          <div class="card-outer">
+            <div class="card-inner">
+              <div class="card-front">UI & UX</div>
+              <div class="card-back">
+                Responsive grid layout for idea cards.<br>
+                Smooth scrolling for navigation.<br>
+                Modal system for enlarged view of ideas.<br>
+                Fixed search, filter, and add buttons.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- What We Offer -->
+  <section id="offer" class="section offer container">
+    <h2 class="section-title">What We Offer</h2>
+    <div class="offer-grid">
+      <div class="offer-item">
+        <div class="circle" data-percent="100">
+          <svg>
+            <circle cx="60" cy="60" r="54"></circle>
+            <circle class="progress" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <div class="circle-text">🔍</div>
+        </div>
+        <h3>Startup Discovery</h3>
+        <p>Explore the latest startups, discover innovative ideas, and find projects that inspire you.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="circle" data-percent="90">
+          <svg>
+            <circle cx="60" cy="60" r="54"></circle>
+            <circle class="progress" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <div class="circle-text">👍👎</div>
+        </div>
+        <h3>Voting System</h3>
+        <p>CExpress your opinion through votes and comments to help promising startups grow.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="circle" data-percent="80">
+          <svg>
+            <circle cx="60" cy="60" r="54"></circle>
+            <circle class="progress" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <div class="circle-text">📝</div>
+        </div>
+        <h3>Upload and Share Ideas</h3>
+        <p>Share your own startup ideas, get feedback, and attract community support.</p>
+      </div>
+
+      <div class="offer-item">
+        <div class="circle" data-percent="100">
+          <svg>
+            <circle cx="60" cy="60" r="54"></circle>
+            <circle class="progress" cx="60" cy="60" r="54"></circle>
+          </svg>
+          <div class="circle-text">🛠️</div>
+        </div>
+        <h3>Developer Collaboration</h3>
+        <p>Join as a developer to help maintain the platform and collaborate with founders.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section id="why-choose-us" class="why-choose-us">
+    <h2 class="section-title">Why Choose Us</h2>
+    <p>Discover the unique advantages that set SparkHub apart.</p>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="icon">💡</div>
+        <h3>Discover Startups</h3>
+        <p>Explore innovative startups submitted by creators worldwide.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">👍</div>
+        <h3>Express Your Opinion</h3>
+        <p>Vote on startups to show support and help great ideas shine.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🚀</div>
+        <h3>Contribute & Upload</h3>
+        <p>Share your own startup ideas and get community feedback.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🛠️</div>
+        <h3>Join as a Developer</h3>
+        <p>Become part of SparkHub’s team and help maintain and improve the platform.</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🌐</div>
+        <h3>Community Driven</h3>
+        <p>Engage with a vibrant ecosystem of founders, developers, and supporters.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Tech Stack -->
+  <section id="stack" class="section container">
+    <h2 class="section-title">Our Tech Stack</h2>
+    <div class="stack-grid">
+      <div class="stack-item"><img src="static/img/python.png" alt="Python"><p>Python</p></div>
+      <div class="stack-item"><img src="static/img/flask.png" alt="Flask"><p>Flask</p></div>
+      <div class="stack-item"><img src="static/img/sqlite.png" alt="SQLite"><p>SQLite</p></div>
+      <div class="stack-item"><img src="static/img/html.png" alt="HTML"><p>HTML5</p></div>
+      <div class="stack-item"><img src="static/img/css.png" alt="CSS"><p>CSS3</p></div>
+      <div class="stack-item"><img src="static/img/js.png" alt="JavaScript"><p>JavaScript</p></div>
+    </div>
+  </section>
+  <button id="backToTop" aria-label="Back to Top">↑</button>
+  
+  <!-- Footer -->
+  <footer class="footer container">
+    <p>“Every big change starts with a small idea. Let’s build the future together.”</p>
+  </footer>
+  <script src="{{ url_for('static', filename='js/branding.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,136 @@
+/* ---------------- Base ---------------- */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #0b0b14;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+/* ---------------- Flash Messages ---------------- */
+ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.flash-error {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+.flash-success {
+  color: #28a745;
+  font-weight: 600;
+}
+
+.flash-info {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+/* ---------------- Logout Button ---------------- */
+.logout-btn {
+  display: inline-block;
+  background: var(--danger);
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 12px;
+  color: #fff;
+  font-weight: 700;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.logout-btn:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ---------------- Request Cards ---------------- */
+.card {
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: 18px;
+  margin-bottom: 18px;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.card-details {
+  margin-top: 12px;
+  display: none;
+  line-height: 1.6;
+}
+
+/* ---------------- Action Buttons ---------------- */
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.approve {
+  background: linear-gradient(90deg, #28a745, #3ddc84);
+  color: #0b0b14;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.approve:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+.reject {
+  background: var(--danger);
+  color: #fff;
+  font-weight: 700;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.reject:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+/* ---------------- Inline Forms ---------------- */
+form {
+  display: inline;
+}

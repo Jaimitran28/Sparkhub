@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Settings</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/branding.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/settings.css') }}">
+</head>
+<body>
+  <div class="bg-aurora"></div>
+
+  {% include 'navbar.html' %}
+
+  <div class="container">
+    <section class="hero">
+      <div class="hero-inner">
+        <h1 class="gradient-text">Account Settings</h1>
+        <p class="tagline">Update your profile details and manage your account.</p>
+      </div>
+    </section>
+
+    <!-- Update Profile -->
+    <div class="auth-container">
+      <h2>Update Profile</h2>
+      <form action="{{ url_for('settings') }}" method="POST" class="auth-form">
+        <label>
+          Name
+          <input type="text" name="name" value="{{ session['name'] }}" required>
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" value="{{ session['email'] }}" required>
+        </label>
+        <label>
+          New Password
+          <input type="password" name="password" placeholder="Leave blank to keep current">
+        </label>
+        <button type="submit" class="cta">Save Changes</button>
+      </form>
+    </div>
+
+    <!-- Danger Zone -->
+    <div class="auth-container">
+      <h2 style="color:#e74c3c;">Danger Zone</h2>
+      <form action="{{ url_for('delete_account') }}" method="POST"
+        onsubmit="return confirm('Are you sure you want to delete your account? This cannot be undone.');">
+        <button type="submit" class="danger">Delete Account</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>Want to contribute more?</p>
+    <button onclick="openDevPopup()">🚀 Request to Become a Developer</button>
+  </footer>
+
+  <!-- Developer Request Popup -->
+  <div id="devPopup" class="popup-overlay">
+    <div class="popup-content">
+      <button class="close-btn" onclick="closeDevPopup()">&times;</button>
+      <h2>Request to Become a Developer</h2>
+      <form action="{{ url_for('developer_request') }}" method="POST">
+        <label>
+          Why should you be a developer?
+          <textarea name="reason" rows="5" required></textarea>
+        </label>
+        <div class="popup-actions">
+          <button type="submit" class="cta">Send</button>
+          <button type="button" class="cta" onclick="closeDevPopup()">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <button id="backToTop" aria-label="Back to Top">↑</button>
+  <script src="{{ url_for('static', filename='js/settings.js') }}"></script>
+</body>
+</html>

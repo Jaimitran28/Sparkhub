@@ -1,0 +1,504 @@
+[
+  {
+    "id": 1,
+    "title": "MediLink",
+    "description": "AI-assisted telemedicine platform connecting doctors with rural patients in real-time.",
+    "category": "Health",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      1,
+      3,
+      5
+    ],
+    "downvotes": [
+      2
+    ],
+    "created_at": "2025-08-05T10:15:23.100Z"
+  },
+  {
+    "id": 2,
+    "title": "EduBoost",
+    "description": "Gamified learning platform where students earn rewards for completing lessons.",
+    "category": "Education",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      2,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-10T14:45:10.200Z"
+  },
+  {
+    "id": 3,
+    "title": "GreenWave",
+    "description": "Smart environmental monitoring using IoT sensors for air and water quality tracking.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      5
+    ],
+    "downvotes": [
+      3
+    ],
+    "created_at": "2025-08-12T09:25:30.300Z"
+  },
+  {
+    "id": 4,
+    "title": "FinTrack",
+    "description": "Personal finance tracker with AI budgeting and investment suggestions.",
+    "category": "Finance",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      6
+    ],
+    "downvotes": [
+      1
+    ],
+    "created_at": "2025-08-14T16:20:15.400Z"
+  },
+  {
+    "id": 5,
+    "title": "TravelMate",
+    "description": "Social travel app that recommends destinations based on preferences and local trends.",
+    "category": "Travel",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      3,
+      4,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-15T12:10:50.500Z"
+  },
+  {
+    "id": 6,
+    "title": "FoodieHub",
+    "description": "AI-curated meal delivery service with personalized nutrition plans.",
+    "category": "Food",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      2
+    ],
+    "downvotes": [
+      4
+    ],
+    "created_at": "2025-08-17T08:40:05.600Z"
+  },
+  {
+    "id": 7,
+    "title": "AICompanion",
+    "description": "Virtual AI assistant for managing schedules, reminders, and daily tasks.",
+    "category": "Tech",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      1,
+      3,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-18T11:55:40.700Z"
+  },
+  {
+    "id": 8,
+    "title": "RoboHelper",
+    "description": "Home robot capable of handling chores and basic household maintenance.",
+    "category": "Robotics",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      2,
+      5
+    ],
+    "downvotes": [
+      1
+    ],
+    "created_at": "2025-08-19T13:30:50.800Z"
+  },
+  {
+    "id": 9,
+    "title": "SmartFarm",
+    "description": "IoT-based precision agriculture platform for crop monitoring and optimization.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      4
+    ],
+    "downvotes": [
+      3
+    ],
+    "created_at": "2025-08-20T10:45:12.900Z"
+  },
+  {
+    "id": 10,
+    "title": "EcoScan",
+    "description": "Mobile app for scanning products and checking their environmental impact.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      3
+    ],
+    "downvotes": [
+      5
+    ],
+    "created_at": "2025-08-21T09:15:30.100Z"
+  },
+  {
+    "id": 11,
+    "title": "MediScan",
+    "description": "AI-powered diagnostic tool that scans medical images for early disease detection.",
+    "category": "Health",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      1,
+      2,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-22T10:00:00.000Z"
+  },
+  {
+    "id": 12,
+    "title": "LearnQuest",
+    "description": "Adaptive learning platform that customizes lessons based on student performance.",
+    "category": "Education",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      3,
+      4
+    ],
+    "downvotes": [
+      2
+    ],
+    "created_at": "2025-08-22T11:15:00.000Z"
+  },
+  {
+    "id": 13,
+    "title": "CleanStream",
+    "description": "IoT-enabled water purification and monitoring system for urban areas.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      3
+    ],
+    "downvotes": [
+      5
+    ],
+    "created_at": "2025-08-22T12:30:00.000Z"
+  },
+  {
+    "id": 14,
+    "title": "BudgetBuddy",
+    "description": "AI finance manager for tracking expenses and providing savings tips.",
+    "category": "Finance",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      4
+    ],
+    "downvotes": [
+      1
+    ],
+    "created_at": "2025-08-22T13:45:00.000Z"
+  },
+  {
+    "id": 15,
+    "title": "TripTuner",
+    "description": "Personalized travel itinerary generator based on interests and budget.",
+    "category": "Travel",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      3,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-22T15:00:00.000Z"
+  },
+  {
+    "id": 16,
+    "title": "NutriPal",
+    "description": "AI meal planner that creates nutrition-focused meal plans for users.",
+    "category": "Food",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      2,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-22T16:15:00.000Z"
+  },
+  {
+    "id": 17,
+    "title": "TaskMate",
+    "description": "AI assistant for managing daily tasks, reminders, and productivity analytics.",
+    "category": "Tech",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      3
+    ],
+    "downvotes": [
+      1
+    ],
+    "created_at": "2025-08-22T17:30:00.000Z"
+  },
+  {
+    "id": 18,
+    "title": "HomeBot",
+    "description": "Robotic assistant that automates cleaning, cooking, and basic maintenance tasks.",
+    "category": "Robotics",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      4,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-22T18:45:00.000Z"
+  },
+  {
+    "id": 19,
+    "title": "AgroSense",
+    "description": "IoT-based smart agriculture system for monitoring soil and crop health.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      3,
+      5
+    ],
+    "downvotes": [
+      2
+    ],
+    "created_at": "2025-08-22T20:00:00.000Z"
+  },
+  {
+    "id": 20,
+    "title": "EcoCheck",
+    "description": "App that scans product barcodes to evaluate environmental sustainability.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      4
+    ],
+    "downvotes": [
+      3
+    ],
+    "created_at": "2025-08-22T21:15:00.000Z"
+  },
+  {
+    "id": 21,
+    "title": "MindBoost",
+    "description": "Brain training app using AI-generated puzzles and memory games.",
+    "category": "Education",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      1,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-23T10:00:00.000Z"
+  },
+  {
+    "id": 22,
+    "title": "HealthTrack",
+    "description": "Wearable device connected to AI for monitoring vitals and fitness progress.",
+    "category": "Health",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      3,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-23T11:15:00.000Z"
+  },
+  {
+    "id": 23,
+    "title": "EduLoop",
+    "description": "Collaborative platform where students can teach and learn from each other.",
+    "category": "Education",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      3,
+      4,
+      5
+    ],
+    "downvotes": [
+      1
+    ],
+    "created_at": "2025-08-23T12:30:00.000Z"
+  },
+  {
+    "id": 24,
+    "title": "RoboChef",
+    "description": "Robotic kitchen assistant that prepares meals based on recipes and preferences.",
+    "category": "Food",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      2,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-23T13:45:00.000Z"
+  },
+  {
+    "id": 25,
+    "title": "FinMate",
+    "description": "AI financial advisor providing personalized investment and savings strategies.",
+    "category": "Finance",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      1,
+      2,
+      3
+    ],
+    "downvotes": [
+      5
+    ],
+    "created_at": "2025-08-23T15:00:00.000Z"
+  },
+  {
+    "id": 26,
+    "title": "TravelGenie",
+    "description": "AI-powered travel planner suggesting optimal routes, stays, and activities.",
+    "category": "Travel",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      3,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-23T16:15:00.000Z"
+  },
+  {
+    "id": 27,
+    "title": "GreenBite",
+    "description": "Sustainable meal delivery app promoting eco-friendly food choices.",
+    "category": "Food",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      1,
+      2
+    ],
+    "downvotes": [
+      4
+    ],
+    "created_at": "2025-08-23T17:30:00.000Z"
+  },
+  {
+    "id": 28,
+    "title": "SmartAssistant",
+    "description": "AI-powered home assistant managing devices, schedules, and reminders.",
+    "category": "Tech",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      3,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-23T18:45:00.000Z"
+  },
+  {
+    "id": 29,
+    "title": "RoboGardener",
+    "description": "Autonomous gardening robot that waters, trims, and monitors plant health.",
+    "category": "Robotics",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      4
+    ],
+    "downvotes": [
+      2
+    ],
+    "created_at": "2025-08-23T20:00:00.000Z"
+  },
+  {
+    "id": 30,
+    "title": "AgroSmart",
+    "description": "Precision farming platform with AI and IoT to maximize crop yield efficiently.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      3,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-23T21:15:00.000Z"
+  },
+  {
+    "id": 31,
+    "title": "EcoAlert",
+    "description": "Real-time environmental hazard notification system for communities.",
+    "category": "Environment",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      2,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-24T10:00:00.000Z"
+  },
+  {
+    "id": 32,
+    "title": "SkillArena",
+    "description": "Gamified skill development platform where users compete in learning challenges.",
+    "category": "Education",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      1,
+      3
+    ],
+    "downvotes": [
+      2
+    ],
+    "created_at": "2025-08-24T11:15:00.000Z"
+  },
+  {
+    "id": 33,
+    "title": "HealthLink",
+    "description": "Platform connecting patients to nearby doctors for quick consultation.",
+    "category": "Health",
+    "image_url": "/static/uploads/demo-edu.png",
+    "upvotes": [
+      2,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-24T12:30:00.000Z"
+  },
+  {
+    "id": 34,
+    "title": "EduStream",
+    "description": "Live-streamed interactive lessons with AI-based real-time feedback.",
+    "category": "Education",
+    "image_url": "/static/uploads/demo-med.png",
+    "upvotes": [
+      1,
+      2,
+      4
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-24T13:45:00.000Z"
+  },
+  {
+    "id": 35,
+    "title": "RoboMedic",
+    "description": "Medical assistance robot for hospitals and emergency care scenarios.",
+    "category": "Robotics",
+    "image_url": "/static/uploads/demo-eco.png",
+    "upvotes": [
+      3,
+      5
+    ],
+    "downvotes": [],
+    "created_at": "2025-08-24T15:00:00.000Z"
+  }
+]

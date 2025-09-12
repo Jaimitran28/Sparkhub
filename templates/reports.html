@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reported Ideas - Startup Spark Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/reports.css') }}">
+</head>
+<body>
+  <!-- Delete Button in Corner -->
+  <button id="openDeleteModal" class="corner-delete-btn">🗑 Delete Ideas</button>
+
+  <!-- Delete Modal -->
+  <div id="deleteModal" class="modal">
+    <div class="modal-content">
+      <span id="closeDeleteModal" class="close">&times;</span>
+      <h2>Delete Reported Ideas</h2>
+      <ul id="reportedIdeasList"></ul>
+    </div>
+  </div>
+
+  <header class="container hero-inner">
+    <h1 class="gradient-text">Reported Ideas</h1>
+    <p class="tagline">View all reported ideas and their associated reports.</p>
+    <a href="{{ url_for('index') }}" class="cta">← Back to Ideas</a>
+  </header>
+
+  <main class="container">
+    <section class="reports-list">
+      {% if ideas|length == 0 %}
+        <p style="text-align:center;color:#fff;opacity:0.8;">No reported ideas yet.</p>
+      {% else %}
+        <ul>
+          {% for idea in ideas %}
+            <li class="report-item" data-idea-id="{{ idea.id }}">
+              <strong>{{ idea.title }}</strong>
+              <div class="report-details">
+                <span>Category: {{ idea.category }}</span>
+                <span>Created: {{ idea.created_at }}</span>
+                <span>Reports: {{ idea.report_count }}</span>
+              </div>
+              <button class="view-reports-btn">View Reports</button>
+
+              <ul class="idea-reports">
+                {% for report in idea.reports %}
+                  <li data-report-id="{{ report.id }}">
+                    <span>
+                      <em>{{ report.createdAt[:19].replace('T',' ') if report.createdAt else '' }}</em> 
+                      {{ report.description }}
+                    </span>
+                    <button class="delete-report-btn">Delete</button>
+                  </li>
+                {% endfor %}
+              </ul>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+  </main>
+
+  <script id="reportsData" type="application/json">
+    {{ ideas | tojson | safe }}
+  </script>
+  <script src="{{ url_for('static', filename='js/reports.js') }}"></script>
+</body>
+</html>

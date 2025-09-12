@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "idea_id": 3,
+    "idea_title": "EduSpark",
+    "description": "bad",
+    "createdAt": "2025-08-27T10:13:55.718579"
+  },
+  {
+    "id": 3,
+    "idea_id": 35,
+    "idea_title": "RoboMedic",
+    "user_id": 1,
+    "description": "mad",
+    "createdAt": "2025-09-06T13:19:56.043644"
+  }
+]

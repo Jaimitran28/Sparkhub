@@ -1,0 +1,150 @@
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: rgba(15, 15, 30, 0.65);
+  backdrop-filter: blur(12px);
+  position: relative;
+  z-index: 1000;
+  padding: 0.6rem 1.2rem; /* spacing controls height */
+  display: flex;
+  align-items: center;
+}
+
+/* Flex container */
+.nav-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+/* Logo */
+.logo-img {
+  height: 42px;  /* scaled down a bit so text looks balanced */
+  width: auto;
+}
+
+/* App name */
+.app-name {
+  font-family: 'Poppins', 'Montserrat', sans-serif; /* ✅ modern font */
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;   /* slightly smaller so navbar doesn’t look too thick */
+  line-height: 1.2;
+}
+
+
+/* Dropdown */
+.dropdown { position: relative; display: inline-block; }
+.dropbtn {
+  background: linear-gradient(90deg, #6a5cff, #00e0ff);
+  color: #0b0b14;
+  padding: 8px 14px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  border-radius: 16px;
+  padding: 12px;
+  min-width: 160px;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;
+}
+.dropdown:hover .dropdown-content { display: flex; }
+.dropdown-content button, .dropdown-content a {
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+  transition: background 0.2s, transform 0.15s;
+}
+.dropdown-content button:hover, .dropdown-content a:hover {
+  background: rgba(255,255,255,0.25);
+  transform: translateY(-1px);
+}
+
+/* Modal content */
+.profile-content, .uploads-content {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 20px;
+  width: auto;
+  max-width: 90%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+}
+
+#userIdeasList li {
+  padding: 8px 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#userIdeasList li:hover { background: rgba(255, 255, 255, 0.08); }
+#userIdeasList li:last-child { border-bottom: none; }
+
+/* Close buttons */
+.close-profile, .close-uploads {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 10px;
+  padding: 4px 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.close-profile:hover, .close-uploads:hover { filter: brightness(1.2); }
+
+/* Buttons for modals */
+.btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  margin: 4px;
+  font-weight: 600;
+  transition: background 0.2s, transform 0.1s;
+}
+.btn:hover { transform: translateY(-1px); }
+
+/* Variants */
+.btn-primary {
+  background: #007bff;
+  color: white;
+}
+.btn-primary:hover { background: #0056b3; }
+
+.btn-success {
+  background: #28a745;
+  color: white;
+}
+.btn-success:hover { background: #1e7e34; }
+
+.btn-danger {
+  background: #dc3545;
+  color: white;
+}
+.btn-danger:hover { background: #a71d2a; }

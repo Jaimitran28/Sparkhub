@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Startup Spark Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🚀</text></svg>">
+  <meta name="theme-color" content="#6a5cff" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+
+</head>
+<body>
+  <div class="bg-aurora"></div>
+  <!-- Navbar -->
+   {% include 'navbar.html' %}
+  <!-- Hero Section -->
+  <header class="hero container">
+    <div class="hero-inner">
+      <h1>Ignite Your Ideas.<span class="gradient-text"> Inspire the Future.</span></h1>
+      <p class="tagline">Submit your startup vision and explore innovative ideas from fellow changemakers.</p>
+      <button class="cta" id="scrollToForm">Submit Your Idea</button>
+      <div class="stats">
+        <div class="stat"><span id="statIdeas">0</span><label>Ideas</label></div>
+        <div class="stat"><span id="statVotes">0</span><label>Total Votes</label></div>
+        <div class="stat"><span id="statCategories">0</span><label>Categories</label></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <div class="search">
+        <input type="text" id="searchInput" placeholder="Search ideas or problems..." />
+      </div>
+      <div class="filters">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option>Tech</option>
+          <option>Health</option>
+          <option>Education</option>
+          <option>Environment</option>
+          <option>Finance</option>
+          <option>Travel</option>
+          <option>Food</option>
+          <option>Robotics</option>
+          <option>AI & ML</option>
+          <option>Blockchain</option>
+          <option>Social Impact</option>
+          <option>Arts & Media</option>
+        </select>
+        <select id="sortSelect">
+          <option value="newest">Newest</option>
+          <option value="popular">Most Popular</option>
+          <option value="trending">Trending</option>
+        </select>
+      </div>
+      <button class="add-floating" id="openForm"><span>＋</span> Add Idea</button>
+    </section>
+
+    <section class="grid" id="ideasGrid" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer container">
+    <p>“Every big change starts with a small idea. What’s yours?”</p>
+  </footer>
+
+  <!-- Modal: Submit Idea -->
+  <dialog id="ideaDialog">
+    <form id="ideaForm" method="dialog" class="idea-form" enctype="multipart/form-data">
+      <div class="form-header">
+        <h3>Submit Your Idea</h3>
+        <button class="icon-btn" id="closeDialog" type="button" aria-label="Close">✕</button>
+      </div>
+      <label>
+        <span>Startup Name</span>
+        <input name="title" id="title" required maxlength="120" placeholder="e.g., EcoTrack" />
+      </label>
+      <label>
+        <span>Problem Statement</span>
+        <textarea name="description" id="description" required maxlength="1200" placeholder="What problem are you solving and how?"></textarea>
+      </label>
+      <label>
+        <span>Category</span>
+        <select name="category" id="category" required>
+          <option disabled selected value="">Choose a category</option>
+          <option>Tech</option>
+          <option>Health</option>
+          <option>Education</option>
+          <option>Environment</option>
+          <option>Finance</option>
+          <option>Travel</option>
+          <option>Food</option>
+          <option>Robotics</option>
+          <option>AI & ML</option>
+          <option>Blockchain</option>
+          <option>Social Impact</option>
+          <option>Arts & Media</option>
+        </select>
+      </label>
+      <div class="two-col">
+        <label>
+          <span>Image (optional)</span>
+          <input type="file" accept="image/*" name="image" id="image" />
+        </label>
+        <label>
+          <span>Or Image URL</span>
+          <input type="url" name="image_url" id="image_url" placeholder="https://..." />
+        </label>
+      </div>
+      <button class="cta wide" type="submit">Publish Idea</button>
+      <p class="tiny">By submitting, you agree that your idea will be publicly visible.</p>
+    </form>
+  </dialog>
+
+  <!-- Modal: View Idea -->
+  <dialog id="viewDialog">
+    <article class="view-card">
+      <button class="icon-btn close" id="closeView">✕</button>
+      <img id="viewImg" class="view-img" alt="Idea image" />
+      <div class="view-content">
+        <div class="view-header">
+          <h3 id="viewTitle"></h3>
+          <span id="viewCategory" class="chip"></span>
+        </div>
+        <p id="viewDesc"></p>
+        <div class="view-actions">
+          <button id="viewUpvote" class="chip">⬆️ Upvote <span id="viewUpvotes">0</span></button>
+          <button id="viewDownvote" class="chip">⬇️ Downvote <span id="viewDownvotes">0</span></button>
+          <button id="viewShare" class="chip">Share</button>
+          <button id="viewReport" class="chip">⚠️ Report</button>
+
+        </div>
+
+      </div>
+    </article>
+  </dialog>
+  <button id="backToTop" aria-label="Back to Top">↑</button>
+  <!-- Chatbot Button -->
+  <div id="chatbotButton">💬</div>
+
+  <!-- Chatbot Window -->
+  <div id="chatbotWindow">
+    <div class="chatbot-header">
+      <span>Ask SparkHub 🤖</span>
+      <button id="closeChatbot">✕</button>
+    </div>
+    <div id="chatbotMessages"></div>
+    <div class="chatbot-input">
+      <input type="text" id="chatbotInput" placeholder="Ask me anything..." />
+      <button id="sendChatbot">➤</button>
+    </div>
+  </div>
+
+
+  <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

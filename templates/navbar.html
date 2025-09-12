@@ -1,0 +1,75 @@
+<!-- templates/navbar.html -->
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- Logo + App name -->
+    <div class="logo">
+      <a href="index" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none;">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="SparkHub Logo" class="logo-img">
+        <span class="app-name">SparkHub</span>
+      </a>
+    </div>
+
+    <!-- Profile dropdown -->
+    <div class="dropdown">
+      <button class="dropbtn">☰</button>
+      <div class="dropdown-content">
+        <button id="openProfile" class="cta wide">Profile</button>
+        <button id="openUploads" class="cta wide">My Uploads</button>
+        <a href="{{ url_for('logout') }}" class="cta wide">Logout</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Modal: Profile -->
+<dialog id="profileDialog">
+  <div class="profile-content">
+    <!-- Close button top-right -->
+    <button class="icon-btn close-profile" id="closeProfile" type="button" aria-label="Close">✕</button>
+
+    <h3>Your Profile</h3>
+    <p><strong>Name:</strong> <span id="profileName">{{ session.get('name','User') }}</span></p>
+    <p><strong>Email:</strong> <span id="profileEmail">{{ session.get('email','user@example.com') }}</span></p>
+    <p><strong>Account Type:</strong> <span id="profileType">{{ session.get('account_type','Standard') }}</span></p>
+    <p><strong>Permanent User ID:</strong> <span id="profileID">{{ session.get('user_id','12345') }}</span></p>
+
+    <button class="cta wide" id="profileSettings">Settings</button>
+  </div>
+</dialog>
+
+<!-- Uploads Modal -->
+<dialog id="uploadsDialog">
+  <div class="uploads-content">
+    <button class="icon-btn close-uploads" id="closeUploads" type="button" aria-label="Close">✕</button>
+    <h3>Your Uploaded Ideas</h3>
+    <ul id="userIdeasList"></ul>
+
+  <div id="ideaDetails" style="display:none;">
+    <h3>
+      <span id="ideaTitleText"></span>
+      <input type="text" id="ideaTitleInput" style="display:none; width:100%;">
+    </h3>
+
+    <p id="ideaDescText"></p>
+    <textarea id="ideaDescriptionTextarea" style="display:none; width:100%;"></textarea>
+
+    <div>
+      <img id="ideaImagePreview" src="" alt="Idea Image" 
+          style="max-width:100%; border-radius:8px; margin-top:10px;">
+      <input type="file" id="ideaImageInput" accept="image/*" 
+            style="display:none; margin-top:10px;">
+    </div>
+
+    <p id="ideaDate"></p>
+
+    <!-- ✅ Styled Buttons -->
+    <div class="idea-actions">
+      <button id="editIdeaBtn" class="btn btn-primary">Edit</button>
+      <button id="saveIdea" class="btn btn-success" style="display:none;">Save</button>
+      <button id="deleteIdea" class="btn btn-danger">Delete</button>
+    </div>
+  </div>
+
+</dialog>
+<script src="{{ url_for('static', filename='js/navbar.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/navbar.css') }}">

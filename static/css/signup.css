@@ -1,0 +1,91 @@
+/* ---------- Centered Auth Card ---------- */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+}
+
+/* Auth Card */
+.auth-card {
+  background: var(--card);
+  padding: 40px 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  backdrop-filter: blur(12px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.auth-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.auth-card h2 {
+  margin-bottom: 24px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  color: var(--accent-2);
+}
+
+/* Input Fields */
+.auth-card input {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+  color: var(--text);
+  font-size: 14px;
+}
+
+.auth-card input::placeholder {
+  color: var(--muted);
+}
+
+/* Buttons */
+.auth-card button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 14px;
+  font-size: 16px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  color: #0b0b14;
+  cursor: pointer;
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.auth-card button:hover {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+}
+
+/* Links */
+.auth-card .link {
+  margin-top: 12px;
+  display: block;
+  font-size: 14px;
+  color: var(--accent-2);
+  text-decoration: none;
+}
+
+.auth-card .link:hover {
+  text-decoration: underline;
+}
+
+/* Error Message */
+.error {
+  margin-bottom: 12px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ff5c5c;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Requests</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ui.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/requests.css') }}">
+</head>
+<body>
+  <div class="container">
+    <h2>Admin Panel - Requests</h2>
+    <!-- Requests -->
+    {% if requests %}
+      {% for req in requests %}
+      <div class="card" data-id="{{ req[0] }}" onclick="toggleDetails('details-{{ req[0] }}')">
+        <div class="card-header">
+          <span>S.No: {{ loop.index }}</span>
+          <span>{{ req[2] }}</span>
+        </div>
+        <div id="details-{{ req[0] }}" class="card-details">
+          <p><strong>Request ID:</strong> {{ req[0] }}</p>
+          <p><strong>User ID:</strong> {{ req[1] }}</p>
+          <p><strong>Email:</strong> {{ req[2] }}</p>
+          <p><strong>Reason:</strong> {{ req[3] }}</p>
+          <p><strong>Created At:</strong> {{ req[4] }}</p>
+
+          <div class="actions">
+            <form method="POST" action="{{ url_for('approve_request', request_id=req[0]) }}">
+              <button type="submit" class="approve">Approve</button>
+            </form>
+            <form method="POST" action="{{ url_for('reject_request', request_id=req[0]) }}">
+              <button type="submit" class="reject">Reject</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      {% endfor %}
+    {% else %}
+      <p>No developer requests found.</p>
+    {% endif %}
+  </div>
+  <script src="{{ url_for('static', filename='js/requests.js') }}"></script>
+</body>
+</html>
