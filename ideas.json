@@ -4,7 +4,7 @@
     "title": "MediLink",
     "description": "AI-assisted telemedicine platform connecting doctors with rural patients in real-time.",
     "category": "Health",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/mediconnect.jpg",
     "upvotes": [
       1,
       3,
@@ -20,7 +20,7 @@
     "title": "EduBoost",
     "description": "Gamified learning platform where students earn rewards for completing lessons.",
     "category": "Education",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/levelup.jpg",
     "upvotes": [
       2,
       4
@@ -33,7 +33,7 @@
     "title": "GreenWave",
     "description": "Smart environmental monitoring using IoT sensors for air and water quality tracking.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/greenwave.jpg",
     "upvotes": [
       1,
       5
@@ -48,7 +48,7 @@
     "title": "FinTrack",
     "description": "Personal finance tracker with AI budgeting and investment suggestions.",
     "category": "Finance",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/fintrack.jpg",
     "upvotes": [
       2,
       6
@@ -63,7 +63,7 @@
     "title": "TravelMate",
     "description": "Social travel app that recommends destinations based on preferences and local trends.",
     "category": "Travel",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/travelmate.jpg",
     "upvotes": [
       3,
       4,
@@ -77,7 +77,7 @@
     "title": "FoodieHub",
     "description": "AI-curated meal delivery service with personalized nutrition plans.",
     "category": "Food",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/foodiehub.jpg",
     "upvotes": [
       1,
       2
@@ -92,7 +92,7 @@
     "title": "AICompanion",
     "description": "Virtual AI assistant for managing schedules, reminders, and daily tasks.",
     "category": "Tech",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/aicompanion.jpg",
     "upvotes": [
       1,
       3,
@@ -106,7 +106,7 @@
     "title": "RoboHelper",
     "description": "Home robot capable of handling chores and basic household maintenance.",
     "category": "Robotics",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/robohelper.jpg",
     "upvotes": [
       2,
       5
@@ -121,7 +121,7 @@
     "title": "SmartFarm",
     "description": "IoT-based precision agriculture platform for crop monitoring and optimization.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/smartfarm.jpg",
     "upvotes": [
       1,
       4
@@ -136,7 +136,7 @@
     "title": "EcoScan",
     "description": "Mobile app for scanning products and checking their environmental impact.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/ecoscan.jpg",
     "upvotes": [
       2,
       3
@@ -151,7 +151,7 @@
     "title": "MediScan",
     "description": "AI-powered diagnostic tool that scans medical images for early disease detection.",
     "category": "Health",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/mediscan.jpg",
     "upvotes": [
       1,
       2,
@@ -165,7 +165,7 @@
     "title": "LearnQuest",
     "description": "Adaptive learning platform that customizes lessons based on student performance.",
     "category": "Education",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/learnquest.jpg",
     "upvotes": [
       3,
       4
@@ -180,7 +180,7 @@
     "title": "CleanStream",
     "description": "IoT-enabled water purification and monitoring system for urban areas.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/cleanstream.jpg",
     "upvotes": [
       1,
       3
@@ -195,7 +195,7 @@
     "title": "BudgetBuddy",
     "description": "AI finance manager for tracking expenses and providing savings tips.",
     "category": "Finance",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/budgetbuddy.jpg",
     "upvotes": [
       2,
       4
@@ -210,7 +210,7 @@
     "title": "TripTuner",
     "description": "Personalized travel itinerary generator based on interests and budget.",
     "category": "Travel",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/triptuner.jpg",
     "upvotes": [
       3,
       5
@@ -223,7 +223,7 @@
     "title": "NutriPal",
     "description": "AI meal planner that creates nutrition-focused meal plans for users.",
     "category": "Food",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/nutripal.jpg",
     "upvotes": [
       1,
       2,
@@ -237,7 +237,7 @@
     "title": "TaskMate",
     "description": "AI assistant for managing daily tasks, reminders, and productivity analytics.",
     "category": "Tech",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/taskmate.jpg",
     "upvotes": [
       2,
       3
@@ -252,7 +252,7 @@
     "title": "HomeBot",
     "description": "Robotic assistant that automates cleaning, cooking, and basic maintenance tasks.",
     "category": "Robotics",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/homebot.jpg",
     "upvotes": [
       4,
       5
@@ -265,7 +265,7 @@
     "title": "AgroSense",
     "description": "IoT-based smart agriculture system for monitoring soil and crop health.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/agrosense.jpg",
     "upvotes": [
       1,
       3,
@@ -281,7 +281,7 @@
     "title": "EcoCheck",
     "description": "App that scans product barcodes to evaluate environmental sustainability.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/ecocheck.jpg",
     "upvotes": [
       2,
       4
@@ -296,7 +296,7 @@
     "title": "MindBoost",
     "description": "Brain training app using AI-generated puzzles and memory games.",
     "category": "Education",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/midboost.jpg",
     "upvotes": [
       1,
       5
@@ -309,7 +309,7 @@
     "title": "HealthTrack",
     "description": "Wearable device connected to AI for monitoring vitals and fitness progress.",
     "category": "Health",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/healthtrack.jpg",
     "upvotes": [
       2,
       3,
@@ -323,7 +323,7 @@
     "title": "EduLoop",
     "description": "Collaborative platform where students can teach and learn from each other.",
     "category": "Education",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/eduloop.jpg",
     "upvotes": [
       3,
       4,
@@ -339,7 +339,7 @@
     "title": "RoboChef",
     "description": "Robotic kitchen assistant that prepares meals based on recipes and preferences.",
     "category": "Food",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/robochef.jpg",
     "upvotes": [
       2,
       5
@@ -352,7 +352,7 @@
     "title": "FinMate",
     "description": "AI financial advisor providing personalized investment and savings strategies.",
     "category": "Finance",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/finmate.jpg",
     "upvotes": [
       1,
       2,
@@ -368,7 +368,7 @@
     "title": "TravelGenie",
     "description": "AI-powered travel planner suggesting optimal routes, stays, and activities.",
     "category": "Travel",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/travelgenie.jpg",
     "upvotes": [
       3,
       4
@@ -381,7 +381,7 @@
     "title": "GreenBite",
     "description": "Sustainable meal delivery app promoting eco-friendly food choices.",
     "category": "Food",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/greenbite.jpg",
     "upvotes": [
       1,
       2
@@ -396,7 +396,7 @@
     "title": "SmartAssistant",
     "description": "AI-powered home assistant managing devices, schedules, and reminders.",
     "category": "Tech",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/smart.jpg",
     "upvotes": [
       2,
       3,
@@ -410,7 +410,7 @@
     "title": "RoboGardener",
     "description": "Autonomous gardening robot that waters, trims, and monitors plant health.",
     "category": "Robotics",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/robogardener.jpg",
     "upvotes": [
       1,
       4
@@ -425,7 +425,7 @@
     "title": "AgroSmart",
     "description": "Precision farming platform with AI and IoT to maximize crop yield efficiently.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/agrosmart.jpg",
     "upvotes": [
       3,
       5
@@ -438,7 +438,7 @@
     "title": "EcoAlert",
     "description": "Real-time environmental hazard notification system for communities.",
     "category": "Environment",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/ecoalert.jpg",
     "upvotes": [
       2,
       4
@@ -451,7 +451,7 @@
     "title": "SkillArena",
     "description": "Gamified skill development platform where users compete in learning challenges.",
     "category": "Education",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/arena.jpg",
     "upvotes": [
       1,
       3
@@ -466,7 +466,7 @@
     "title": "HealthLink",
     "description": "Platform connecting patients to nearby doctors for quick consultation.",
     "category": "Health",
-    "image_url": "/static/uploads/demo-edu.png",
+    "image_url": "/static/uploads/helathlink.jpg",
     "upvotes": [
       2,
       5
@@ -479,7 +479,7 @@
     "title": "EduStream",
     "description": "Live-streamed interactive lessons with AI-based real-time feedback.",
     "category": "Education",
-    "image_url": "/static/uploads/demo-med.png",
+    "image_url": "/static/uploads/edustream.jpg",
     "upvotes": [
       1,
       2,
@@ -493,8 +493,9 @@
     "title": "RoboMedic",
     "description": "Medical assistance robot for hospitals and emergency care scenarios.",
     "category": "Robotics",
-    "image_url": "/static/uploads/demo-eco.png",
+    "image_url": "/static/uploads/robomedic.jpg",
     "upvotes": [
+      1,
       3,
       5
     ],
